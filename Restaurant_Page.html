@@ -67,21 +67,32 @@
             height: 474px;
             align-self: stretch;
             background-repeat: no-repeat;
-            background-image: url("./resource/restaurant_page/Hero\ image.png");
             background-size: cover;
         }
 
-        .main {
+        main {
             display: flex;
-            justify-content: flex-start;
+            padding: 56px 120px;
+            flex-direction: column;
             align-items: flex-start;
-            padding: 24px 80px 24px 80px;
-            gap: 48px;
-            box-sizing: border-box;
+            gap: 40px;
+            align-self: stretch;
+            border-radius: 32px 32px 0px 0px;
+            background: var(--Core-white, #FFF);
+            /* xlarge */
+            box-shadow: 0px 24px 48px -12px rgba(0, 0, 0, 0.15);
 
 
         }
 
+        .Restaurant_info {
+            display: flex;
+            width: 1200px;
+            max-width: 1200px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+        }
 
         footer {
             height: 290px;
@@ -169,11 +180,54 @@
     </nav>
 
     <header>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-interval="1000" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="4"
+                    aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./resource/restaurant_page/Hero image.png" alt="">
+                </div>
+                <div class="carousel-item ">
+                    <img src="/resource/restaurant_page/Hero image-2.png" alt="">
+                </div>
+                <div class="carousel-item ">
+                    <img src="/resource/restaurant_page/Hero image-3.png" alt="">
+                </div>
+                <div class="carousel-item ">
+                    <img src="/resource/restaurant_page/Hero image-4.png" alt="">
+                </div>
+                <div class="carousel-item ">
+                    <img src="/resource/restaurant_page/Hero image-1.png" alt="">
+                </div>
+            </div class="carousel-controls">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        </div>
 
     </header>
     <main>
 
-        <section class="Restaurant-info">
+        <section class="Restaurant_info">
+
         </section>
         <section class="stepper">
         </section>
