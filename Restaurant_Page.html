@@ -8,8 +8,9 @@
     <style>
         * {
             position: relative;
-            border: 1px black solid;
+            /* border: 1px black solid; */
             width: 100%;
+            font-family: "Noto Sans TC";
         }
 
         body,
@@ -28,11 +29,9 @@
             display: flex;
             width: 100%;
             height: 64px;
-            min-width: 1024px;
-            max-width: 1920px;
             padding: 0px 16px;
             align-items: center;
-            gap: 8px;
+            gap: auto;
         }
 
         .navbarsearch {
@@ -62,13 +61,30 @@
 
         header {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: flex-start;
-            height: 474px;
             align-self: stretch;
             background-repeat: no-repeat;
             background-size: cover;
+            width: 100%;
         }
+
+        #carouselExampleControls {
+            border-color: #306DB8;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .carousel-indicators {
+            /* border: #0cd627 solid 2px; */
+            display: flex;
+            position: absolute;
+            transform: translateX(-15%);
+            top: 80%;
+            
+        }
+
 
         main {
             display: flex;
@@ -81,17 +97,168 @@
             background: var(--Core-white, #FFF);
             /* xlarge */
             box-shadow: 0px 24px 48px -12px rgba(0, 0, 0, 0.15);
+            margin-top: -32px;
 
 
         }
 
         .Restaurant_info {
             display: flex;
-            width: 1200px;
-            max-width: 1200px;
+            width: 100%;
             flex-direction: column;
+            justify-content: space-between;
             align-items: flex-start;
-            gap: 16px;
+           
+        }
+
+        .stepper {
+            display: flex;
+            width: 100%;
+            align-items: flex-start;
+            gap: var(--spacing-2xl, 40px);
+
+        }
+
+        div[class^=stepper_name] {
+            font-size: var(--size-text-lg, 18px);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 160%;
+            /* 28.8px */
+
+        }
+
+        .featured-section {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            white-space: nowrap;
+            justify-content: start;
+        }
+
+        .header-container {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            justify-content: start;
+        }
+
+        .header-title-wrapper {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            gap: 8px;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.4;
+            justify-content: start;
+            flex-wrap: wrap;
+        }
+
+        .accent-bar {
+            border-radius: 40px;
+            background: var(--Foundation-Brown-Normal, #ca3838);
+            align-self: stretch;
+            width: 4px;
+            height: 26px;
+
+        }
+
+        .main-title {
+            align-self: stretch;
+            margin: auto 0;
+            width: auto;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            font-weight: 400;
+            margin-top: 8px;
+            white-space: wrap;
+        }
+
+        .products-grid {
+            display: flex;
+            margin-top: 28px;
+            width: 100%;
+            align-items: start;
+            gap: 24px;
+            font-size: 16px;
+            font-weight: 700;
+            justify-content: start;
+            flex-wrap: wrap;
+        }
+
+        .product-card {
+            align-items: start;
+            border-radius: 20px;
+            border: 1px solid var(--Text-300, #b0b0b0);
+            display: flex;
+            min-width: 240px;
+            gap: 24px;
+            justify-content: start;
+            flex-wrap: wrap;
+            flex-grow: 1;
+            width: 464px;
+            padding: 24px;
+        }
+
+        .product-info {
+            display: flex;
+            min-width: 240px;
+            flex-direction: column;
+            justify-content: start;
+            flex: 1;
+            flex-basis: 0%;
+        }
+
+        .product-name {
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        .product-price {
+            margin-top: 4px;
+        }
+
+        .product-description {
+            color: rgba(102, 112, 133, 1);
+            font-weight: 400;
+            line-height: 24px;
+            margin-top: 4px;
+            white-space: wrap;
+        }
+
+        .product-image {
+            aspect-ratio: 1;
+            object-fit: contain;
+            object-position: center;
+            width: 140px;
+            border-radius: 12px;
+        }
+
+        @media (max-width: 991px) {
+
+            .featured-section,
+            .header-container,
+            .header-title-wrapper,
+            .subtitle,
+            .products-grid {
+                max-width: 100%;
+                white-space: initial;
+            }
+
+            .product-card {
+                display: flex;
+                max-width: 100%;
+                white-space: initial;
+                padding: 12px 20px;
+                height: 100%;
+            }
+
+            .product-info {
+                white-space: initial;
+            }
         }
 
         footer {
@@ -104,7 +271,7 @@
 
         }
 
-        @media screen and (max-width:1920px) and (min-width:1440px) {}
+     
 
         @media screen and (max-width:1440px) and (min-width:1280px) {
             .main {
@@ -118,8 +285,8 @@
     </style>
 
 
-    <link rel="stylesheet" href="../_css/bootstrap.css">
-    <script src="../_js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="./_css/bootstrap.css">
+    <script src="./_js/bootstrap.bundle.js"></script>
 
 </head>
 
@@ -193,21 +360,21 @@
                 <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="4"
                     aria-label="Slide 5"></button>
             </div>
-            <div class="carousel-inner">
+            <div class="carousel-inner ">
                 <div class="carousel-item active">
                     <img src="./resource/restaurant_page/Hero image.png" alt="">
                 </div>
                 <div class="carousel-item ">
-                    <img src="/resource/restaurant_page/Hero image-2.png" alt="">
+                    <img src="./resource/restaurant_page/Hero image-2.png" alt="">
                 </div>
                 <div class="carousel-item ">
-                    <img src="/resource/restaurant_page/Hero image-3.png" alt="">
+                    <img src="./resource/restaurant_page/Hero image-3.png" alt="">
                 </div>
                 <div class="carousel-item ">
-                    <img src="/resource/restaurant_page/Hero image-4.png" alt="">
+                    <img src="./resource/restaurant_page/Hero image-4.png" alt="">
                 </div>
                 <div class="carousel-item ">
-                    <img src="/resource/restaurant_page/Hero image-1.png" alt="">
+                    <img src="./resource/restaurant_page/Hero image-1.png" alt="">
                 </div>
             </div class="carousel-controls">
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
@@ -228,10 +395,619 @@
 
         <section class="Restaurant_info">
 
+            <style>
+
+
+                .tag-list {
+                    align-self: start;
+                    display: flex;
+                    align-items: start;
+                    gap: 12px;
+                    font-size: 14px;
+                    color: var(--Grey-Dark, #101828);
+                    line-height: 1.6;
+                    justify-content: start;
+                    width: auto;
+                }
+
+                .tag-highlight {
+                    border-radius: 8px;
+                    background-color: var(--Primary-Red, #CA3838);
+                    padding: 4px 8px;
+                    color: var(--Grey-Light, #F2F4F7);
+                    text-wrap: nowrap;
+                }
+
+                .tag-default {
+                    border-radius: 8px;
+                    background-color: var(--Grey-Light, #F2F4F7);
+                    padding: 4px 8px;
+                    text-wrap: nowrap;
+                }
+
+                .store-container {
+                    display: flex;
+                    margin-top: 16px;
+                    width: 100%;
+                    align-items: start;
+                    gap: 16px;
+                    justify-content: start;
+                    flex-wrap: nowrap;
+                }
+
+                .store-info {
+                    display: flex;
+                    min-width: 240px;
+                    flex-direction: column;
+                    color: var(--Grey-Dark, #101828);
+                    justify-content: start;
+                    flex: 1;
+                    flex-basis: 0%;
+                }
+
+                .store-name {
+                    font-size: 40px;
+                    line-height: 1.2;
+                }
+
+                .info-list {
+                    align-self: start;
+                    display: flex;
+                    margin-top: 16px;
+                    align-items: center;
+                    gap: 16px;
+                    font-size: 16px;
+                    line-height: 1.6;
+                    justify-content: start;
+                    flex-wrap: wrap;
+                }
+
+                .info-item {
+                    align-self: stretch;
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    justify-content: start;
+                    margin: auto 0;
+                    width: auto;
+                }
+
+                .info-icon {
+                    aspect-ratio: 1;
+                    object-fit: contain;
+                    object-position: center;
+                    width: 24px;
+                    align-self: stretch;
+                    margin: auto 0;
+                }
+
+                .status-text {
+                    font-family: SF Pro Text, -apple-system, Roboto, Helvetica, sans-serif;
+                    color: var(--Primary-Red, #CA3838);
+                }
+
+                .more-info {
+                    color: var(--Primary-Blue, #306DB8);
+                    background-color: #FFF;
+                    width: auto;
+                    border: white solid 1px;
+                    padding-bottom: 2px;
+                }
+
+                .delivery-toggle {
+                    border-radius: 1000px;
+                    border: 1px solid var(--Grey-300, #d0d5dd);
+                    background: var(--Grey-100, #f2f4f7);
+                    box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.04);
+                    display: flex;
+                    overflow: hidden;
+                    font-size: 14px;
+                    line-height: 1.6;
+                    justify-content: center;
+                    align-items: center;
+                    width: 144px;
+                    height: 40px;
+
+                }
+
+                .toggle-active {
+                    border-radius: 100px;
+                    background: var(--Foundation-Grey-Dark, #282727);
+                    box-shadow: 0px 12px 16px -4px rgba(0, 0, 0, 0.05), 0px 0px 6px -2px rgba(0, 0, 0, 0.05);
+                    color: var(--White, #FFFFFF);
+                    padding: 9px 24px;
+                    width: 76px;
+                    height: 40px;
+                    text-wrap: nowrap;
+                }
+
+                .toggle-inactive {
+                    border-radius: 4px;
+                    box-shadow: 0px 12px 16px -4px rgba(0, 0, 0, 0.05), 0px 0px 6px -2px rgba(0, 0, 0, 0.05);
+                    min-height: 40px;
+                    color: var(--Grey-Medium, #667085);
+                    padding: 9px 24px;
+                    width: 76px;
+                    height: 40px;
+                    text-wrap: nowrap;
+                    border: #f2f4f7 solid 1px;
+                }
+
+                .delivery-info {
+                    display: flex;
+                    margin-top: 16px;
+                    width: 100%;
+                    align-items: center;
+                    gap: 12px;
+                    font-size: 16px;
+                    color: var(--Grey-Dark, #101828);
+                    font-weight: 400;
+                    line-height: 1.6;
+                    justify-content: start;
+                    flex-wrap: wrap;
+                }
+
+                @media (max-width: 991px) {
+
+                    .restaurant-info,
+                    .store-container,
+                    .store-info,
+                    .store-name,
+                    .info-list,
+                    .delivery-info {
+                        max-width: 100%;
+                    }
+
+                    .tag-default,
+                    .info-item,
+                    .delivery-toggle {
+                        white-space: initial;
+                    }
+
+                    .toggle-active,
+                    .toggle-inactive {
+                        padding: 0 20px;
+                    }
+                }
+            </style>
+
+                <div class="tag-list">
+                    <div class="tag-highlight">指定餐點 5 折</div>
+                    <div class="tag-default">交通方便</div>
+                    <div class="tag-default">少油少鹽</div>
+                    <div class="tag-default">聚餐首選</div>
+                </div>
+
+                <div class="store-container">
+                    <div class="store-info">
+                        <h1 class="store-name">Flavor Factory 義大利小館</h1>
+                        <div class="info-list">
+                            <div class="info-item">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d74ea16c45ad2f1235c6ef705acd5acc3e81dfec023fddde2da7acfba4100659?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                                    alt="Rating icon" class="info-icon" />
+                                <span>4.9</span>
+                            </div>
+                            <div class="info-item">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b6d17be28bb233e0aaa43c4e98bb65426371db14510bb166a1e38292573c6d87?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                                    alt="Reviews icon" class="info-icon" />
+                                <span>2,863 個評論</span>
+                            </div>
+                            <div class="info-item">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4af0eec3ea8bc2418fbabeaf4c47b92f0fe4df35b491105519d433ecc7c6e9b4?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                                    alt="Price range icon" class="info-icon" />
+                                <span>400-800</span>
+                            </div>
+                            <div class="info-item">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/959d9de587296ab5c8c29d5dd47d491b2302da4ac75085e301e6ebc4f0763d3d?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                                    alt="Opening hours icon" class="info-icon" />
+                                <span><span class="status-text">營業中</span> 11:00-20:00</span>
+                            </div>
+                            <div class="info-item">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ffdbc677d08eb9bcf97ab44f3d8e9f62507190d3944133999162a35237e15d4d?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                                    alt="Restaurant type icon" class="info-icon" />
+                                <span>義大利麵店</span>
+                            </div>
+                            <button class="more-info" tabindex="0">更多資訊</button>
+                        </div>
+                    </div>
+
+                    <div class="delivery-toggle" role="tablist">
+                        <button class="toggle-active" role="tab" aria-selected="true" tabindex="0">外送</button>
+                        <button class="toggle-inactive" role="tab" aria-selected="false" tabindex="0">外帶</button>
+                    </div>
+                </div>
+
+                <div class="delivery-info">
+                    <div class="info-item">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/280050cd8b8c8447a434959d19e71de37ffc54c999b68ebc43bc3b277754f121?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                            alt="Delivery time icon" class="info-icon" />
+                        <span>20-30分鐘</span>
+                    </div>
+                    <span style="width: auto;">外送費 $45</span>
+                </div>
+           
         </section>
         <section class="stepper">
+            <div class="stepper-dividor"
+                style="position: absolute; margin-top: 33px; display:flex; height: 2px; align-self:stretch; background-color:#D0D5DD;">
+            </div>
+            <div class="stepper_block " style="display:flex ;flex-direction:column;gap:4px; width:72px; ">
+                <div class="stepper_name_active" style="color:#CA3838 ; white-space:nowrap; width:auto;">人氣精選</div>
+                <div style="display: flex; height: 2px; align-self:stretch; background-color:#CA3838 ;"></div>
+            </div>
+            <div class="stepper_block " style="display:flex ;flex-direction:column;gap:4px; width:72px; ">
+                <div class="stepper_name_active" style="color:#7F7F7F ; white-space:nowrap; width:auto;">義大利麵</div>
+                <!-- <div style="display: flex; height: 2px; align-self:stretch; background-color:#D0D5DD;"></div> -->
+            </div>
+            <div class="stepper_block " style="display:flex ;flex-direction:column;gap:4px; width: 36px; ">
+                <div class="stepper_name_active" style="color:#7F7F7F ; white-space:nowrap; width:auto;">燉飯</div>
+                <!-- <div style="display: flex; height: 2px; align-self:stretch; background-color:#D0D5DD;"></div> -->
+            </div>
+            <div class="stepper_block " style="display:flex ;flex-direction:column;gap:4px; width: 36px; ">
+                <div class="stepper_name_active" style="color:#7F7F7F ; white-space:nowrap; width:auto;">披薩</div>
+                <!-- <div style="display: flex; height: 2px; align-self:stretch; background-color:#D0D5DD;"></div> -->
+            </div>
+            <div class="stepper_block " style="display:flex ;flex-direction:column;gap:4px; width: 36px; ">
+                <div class="stepper_name_active" style="color:#7F7F7F ; white-space:nowrap; width:auto;">飲料</div>
+                <!-- <div style="display: flex; height: 2px; align-self:stretch; background-color:#D0D5DD;"></div> -->
+            </div>
+
+
         </section>
-        <section class="popular">
+        <section class="Popular">
+
+
+            <div class="featured-section">
+                <div class="header-container">
+                    <div class="header-title-wrapper">
+                        <div class="accent-bar"></div>
+                        <div class="main-title">人氣精選</div>
+                    </div>
+                    <div class="subtitle">第一次點餐，絕不能錯過這些招牌！</div>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-info">
+                            <div class="product-name">乾式蒜辣白酒海鮮麵套餐</div>
+                            <div class="product-price">$450</div>
+                            <div class="product-description">
+                                以新鮮海鮮和香濃的白酒醬汁為特色，帶來豐富的口感和誘人的香氣，海鮮愛好者不可錯過。
+                                
+                            </div>
+                        </div>
+                        <img loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/182543a7dbbd1a377ec22a64728b185639be4a9f4baf975e1fbd05547573aeef?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                            class="product-image" alt="乾式蒜辣白酒海鮮麵套餐" />
+                    </div>
+                    <div class="product-card">
+                        <div class="product-info">
+                            <div class="product-name">鮮蝦烘蛋</div>
+                            <div class="product-price">$180</div>
+                            <div class="product-description">
+                                融合了新鮮蝦仁和蛋液的美味料理，口感豐富、營養均衡，散發著濃厚的海鮮和蛋香。
+                                
+                            </div>
+                        </div>
+                        <img loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/754053f2a7722571f28bda173b58ee4ccf7cbfa8f8045dce33cea2c4fe4ed28d?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                            class="product-image" alt="鮮蝦烘蛋" />
+                    </div>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-info">
+                            <div class="product-name">青醬奶油雞肉麵套餐</div>
+                            <div class="product-price">$450</div>
+                            <div class="product-description">
+                                融合了清新的青醬和濃郁的奶油，味道豐富且令人回 味無窮，是一道獨特而美味的餐點。
+                              
+                            </div>
+                        </div>
+                        <img loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/da7d05096c5cc264561049302a443f0be8f3ae64eb71fe82e790f9d6f3afe17e?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                            class="product-image" alt="青醬奶油雞肉麵套餐" />
+                    </div>
+                    <div class="product-card">
+                        <div class="product-info">
+                            <div class="product-name">無花果起司沙拉</div>
+                            <div class="product-price">$200</div>
+                            <div class="product-description">
+                                結合了甜美的無花果、濃郁的起司和清新的生菜是夏日中輕盈健康的完美選擇。
+                               
+                            </div>
+                        </div>
+                        <img loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/3b84a39ab665a059c00a34d6ac91529ba03c439f937daf27d8b7dc23b2d5bb6d?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                            class="product-image" alt="無花果起司沙拉" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="Spaghetti">
+
+            <div class="pasta-section">
+                <div class="header">
+                    <div class="header-title-wrapper">
+                        <div class="accent-bar"></div>
+                        <div class="main-title ">義大利麵</div>
+                    </div>
+                    <div class="subtitle">
+                        肉品原產地：台灣豬肉、牛肉、優質雞腿。我們堅持嚴格細選食材，只為帶給大家美味高品質的美食。
+        
+                        
+                    </div>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-info">
+                            <div class="product-name">經典肉醬義大利麵</div>
+                            <div class="product-price">$340</div>
+                            <div class="product-description">
+                                這道經典的義大利麵以豐富的肉醬為特色，紅酒和香料的加入提升了整道菜的層次和深度。
+
+                                
+                            </div>
+                        </div>
+                        <img loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/665d4142c649b3c940a1b4d38fb709486fa0d858444946f451c13fc7cb2de345?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                            class="product-image" alt="經典肉醬義大利麵" />
+                    </div>
+                    <div class="product-card">
+                        <div class="product-info">
+                            <div class="product-name">朝鮮薊與橄欖義大利麵</div>
+                            <div class="product-price">$340</div>
+                            <div class="product-description">
+                                清新的朝鮮薊和鹹香的黑橄欖，搭配檸檬汁的酸爽，橄欖油和蒜泥的加入提升了整道菜的香氣。
+                              
+                                
+                            </div>
+                        </div>
+                        <img loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/edb9c24d4146cfcfa2800da23302ca477a046c7f186ac9eb69733fc6c8ad1faa?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                            class="product-image" alt="朝鮮薊與橄欖義大利麵" />
+                    </div>
+                </div>
+
+
+
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-info">
+                            <div class="product-name">紅椒培根義大利麵</div>
+                            <div class="product-price">$340</div>
+                            <div class="product-description">
+                                脆香的培根與清脆的紅椒完美結合，橄欖油和帕瑪森奶酪的搭配讓這道菜更加香濃。
+                            </div>
+                        </div>
+                        <img loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/ff932410e1c813da59c6d787997a962799d9faf7dafcc4931e168850134a22ff?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                            class="product-image" alt="紅椒培根義大利麵" />
+                    </div>
+                    <div class="product-card">
+                        <div class="product-info">
+                            <div class="product-name">大牌檔肉麵套餐</div>
+                            <div class="product-price">$280</div>
+                            <div class="product-description">
+                                中式大排檔風味，豐富的肉醬搭配Q彈的義大利麵，  讓每一口都充滿濃郁的美味和層次感。
+                            </div>
+                        </div>
+                        <img loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/1332a4a6ce438f4b5e0cec08877f30706a821c75e3e47e91b4a05b90d3c8fb7a?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                            class="product-image" alt="大牌檔肉麵套餐" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="Rice">
+            <div class="header">
+                <div class="header-title-wrapper">
+                    <div class="accent-bar"></div>
+                    <div class="main-title ">燉飯</div>
+                </div>
+                <div class="subtitle">
+                    每道菜都可以根據個人口味適當調整調料與內容物的比例，這樣可以做出更符合自己口味的燉飯。
+                       
+                </div>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-info">
+                        <div class="product-name">菠菜奶酪燉飯</div>
+                        <div class="product-price">$290</div>
+                        <div class="product-description">
+                            嫩滑的菠菜搭配奶酪，帶來一口滿滿的綠色健康和濃郁的風味。
+                         
+                           
+                        </div>
+                    </div>
+                    <img loading="lazy"
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/dc391454602a28624e3383d0e8918104560c15152af0ed49c176bc54f85fb4f9?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                        class="product-image" alt="菠菜奶酪燉飯 - 綠色蔬菜與奶酪的完美結合" />
+                </div>
+                <div class="product-card">
+                    <div class="product-info">
+                        <div class="product-name">牛肉燉飯</div>
+                        <div class="product-price">$300</div>
+                        <div class="product-description">
+                            嫩滑的牛肉和紅酒的濃郁香味，使這道燉飯格外豐富美味。
+                        </div>
+                    </div>
+                    <img loading="lazy"
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/5d1cb409ba611ed3825a992676f6babb3abce514295d702b3e8163baa7c755cf?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                        class="product-image" alt="牛肉燉飯 - 紅酒燉煮的香濃美味" />
+                </div>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-info">
+                        <div class="product-name">豌豆與火腿燉飯</div>
+                        <div class="product-price">$180</div>
+                        <div class="product-description" >
+
+                            當豌豆的清甜與火腿的鹹香交織在一起時，每一口都帶來不同的味覺驚喜。這道燉飯不僅色彩鮮豔，還充滿了多層次的風味，讓人回味無窮。
+                        </div>
+                    </div>
+                    <img loading="lazy"
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/72a2077f128f68bf7f41560cf809c170a48c4ea948fe18a623d4a1e75f7076dc?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                        class="product-image" alt="豌豆與火腿燉飯 - 經典搭配的美味組合" />
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-info">
+                        <div class="product-name">海鮮燉飯</div>
+                        <div class="product-price">$280</div>
+                        <div class="product-description">
+                            這道燉飯融合了新鮮的海鮮，無論是蝦、蛤蜊還是鮮魚，都帶來了大海的味道。每一口都彷彿在品嚐海風，濃郁的海洋鮮味與米飯的綿密口感交織在一起，讓人陶醉其中。
+
+                        </div>
+                    </div>
+                    <img loading="lazy"
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/cc01c3bf5ade998f39b4592f52e40c8459dfc322749ee590a5682a8c8e9f02b8?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                        class="product-image" alt="海鮮燉飯 - 新鮮海味的豐富組合" />
+                </div>
+            </div>
+
+        </section>
+        <section class="Pizza">
+
+            <div class="pizza-section">
+                <div class="header-container">
+                    <div class="header-title-wrapper">
+                        <div class="accent-bar"></div>
+                        <div class="main-title">披薩</div>
+                    </div>
+                    <div class="subtitle" style="white-space: wrap;">
+                        由發酵的麵團、番茄醬和各式各樣的配料組成，通常以高溫烘烤至酥脆香脆。 其豐富多變的口味和創意無限的搭配，使得每一塊披薩都能滿足不同人的味蕾。
+                      
+                       
+                    </div>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-info">
+                            <div class="product-title">瑪格麗塔披薩</div>
+                            <div class="product-price">$340</div>
+                            <div class="product-description"style="white-space: wrap;">
+                                簡單而經典的瑪格麗塔披薩，完美展現了意大利的純粹風味。新鮮的番茄醬與柔滑的莫札瑞拉起司相得益彰，搭配香氣四溢的羅勒葉，每一口都是對傳統的美好詮釋。
+                              
+                            </div>
+                        </div>
+                        <img loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/e750972aba3644f6f1dfd12f38b75712310b96b0b5b5df148f677c13eb71b6ed?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                            class="product-image" alt="瑪格麗塔披薩 - 配有新鮮番茄、莫札瑞拉和羅勒" />
+                    </div>
+                    <div class="product-card">
+                        <div class="product-info">
+                            <div class="product-title">四季披薩</div>
+                            <div class="product-price">$340</div>
+                            <div class="product-description"style="white-space: wrap;">
+                                這道披薩巧妙地將四種獨特的配料融入其中。無論是春天的清新蔬菜、夏天的多汁番茄、秋天的香濃蘑菇，還是冬天的濃郁培根，都讓人感受到季節變遷的美妙。
+                                
+                               
+                                
+                                
+                                
+                                
+                            </div>
+                        </div>
+                        <img loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/84d77b2d431dcb713332c2b53b245896cc950e43152992273ecd4f3f75b1921e?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                            class="product-image" alt="四季披薩 - 四種不同配料代表四季風味" />
+                    </div>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-info">
+                            <div class="product-title">奶酪披薩</div>
+                            <div class="product-price">$340</div>
+                            <div class="product-description">
+                                奶酪愛好者的天堂，這道披薩宛如為奶酪而生的藝術品。集合 了四種濃郁的奶酪風味，柔滑的莫札瑞拉、濃厚的車達、鹹香的藍紋，以及香醇的帕馬森，層層堆疊出豐富的層次。
+
+                            </div>
+                        </div>
+                        <img loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/ed66aa12d4ae2026dd587340b5ab842921558eac6fb617097913e414751ffb80?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                            class="product-image" alt="奶酪披薩 - 四種濃郁奶酪的組合" />
+                    </div>
+                    <div class="product-card">
+                        <div class="product-info">
+                            <div class="product-title">辣味沙樂美腸披薩</div>
+                            <div class="product-price">$340</div>
+                            <div class="product-description">
+                                辣味沙樂美腸與紅辣椒片完美結合，帶來刺激味蕾的火辣體驗，每一口都充滿冒險的激情。香濃的肉香與紅辣椒的辛香交織，彷彿火焰在舌尖上舞動，讓人心跳加速、欲罷不能。
+
+                            </div>
+                        </div>
+                        <img loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/2ef5406450ac5b6e64a8acc684f502113739282bd19638e8b3f48c7936e17332?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                            class="product-image" alt="辣味沙樂美腸披薩 - 配有辣味沙樂美腸和紅辣椒片" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="Drink">
+            <div class="section-header">
+                <div class="header-title-wrapper">
+                    <div class="accent-bar"></div>
+                    <div class="main-title">飲料</div>
+                </div>
+                <div class="subtitle">
+                    專為炎熱季節設計的清涼解渴飲料。這些飲品不僅能迅速補充水分，還能帶來清新的味覺享受，讓人在酷暑中感到愉快和放鬆。
+                </div>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-info">
+                        <div class="product-name">檸檬蜂蜜水</div>
+                        <div class="price">$120</div>
+                        <div class="product-description">
+                            清爽的檸檬與天然蜂蜜融合， 帶來提神的甘甜口感。
+                        </div>
+                    </div>
+                    <img loading="lazy"
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/12af1793f5cb10d5b698605981ee88531bb0c5db58bf607b013dc152860ad3a5?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                        class="product-image" alt="檸檬蜂蜜水 - 清爽的檸檬與天然蜂蜜調製飲品" />
+                </div>
+                <div class="product-card">
+                    <div class="product-info">
+                        <div class="product-name">胡蘿蔔橙汁</div>
+                        <div class="price">$120</div>
+                        <div class="product-description">
+                            營養豐富的胡蘿蔔與清甜的橙汁完美結合，帶來清爽的健康享受。
+                        </div>
+                    </div>
+                    <img loading="lazy"
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/89f1933e063c495e1d3149aaf90e9b1ea1de888d80b051fdf446152870de6b0d?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                        class="product-image" alt="胡蘿蔔橙汁 - 營養豐富的混合果汁" />
+                </div>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-info">
+                        <div class="product-name">覆盆子檸檬氣泡飲</div>
+                        <div class="price">$120</div>
+                        <div class="product-description">
+                            酸甜的覆盆子與檸檬結合，搭配氣泡水，帶來口感豐富的清涼感。
+                        </div>
+                    </div>
+                    <img loading="lazy"
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/29a875c0c6a2963d28408e620e6215562768e64b97431bde6e7f606c98e64f41?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                        class="product-image" alt="覆盆子檸檬氣泡飲 - 清爽的氣泡特調飲品" />
+                </div>
+                <div class="product-card">
+                    <div class="product-info">
+                        <div class="product-name">西瓜薄荷冰沙</div>
+                        <div class="price">$120</div>
+                        <div class="product-description">
+                            冰涼的西瓜與薄荷的清新完美結合，是炎炎夏日的最佳解暑飲品。
+                        </div>
+                    </div>
+                    <img loading="lazy"
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/786ada154639b81db76c2814d57902cd291eee0d90d4d47d7972e356b24b51db?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                        class="product-image" alt="西瓜薄荷冰沙 - 清涼解暑的冰沙飲品" />
+                </div>
+            </div>
         </section>
 
     </main>
