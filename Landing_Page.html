@@ -22,14 +22,12 @@
 
 
 
-    nav {
+    .nav_1440 {
       box-sizing: border-box;
       justify-content: space-between;
       display: flex;
       width: 100%;
       height: 64px;
-      min-width: 1024px;
-      max-width: 1920px;
       padding: 0px 16px;
       align-items: center;
       gap: 8px;
@@ -38,7 +36,7 @@
     .navbarsearch {
       display: flex;
       padding: 0px 12px;
-      width: 771px;
+      width: 600px;
       height: 37px;
       align-items: flex-start;
       border-radius: 16px;
@@ -161,7 +159,7 @@
     .goodPrice,
     .all {
       display: flex;
-      width: 948px;
+      width: 100%;
       height: fit-content;
       align-items: center;
       margin-bottom: 20px;
@@ -180,35 +178,69 @@
 
     }
 
-    @media screen and (max-width:1920px) and (min-width:1440px) {}
 
-    @media screen and (max-width:1440px) and (min-width:1280px) {
+
+
+
+    @media screen and (max-width:420px) and (min-width:375px) {
+
+      .nav_1440 {
+        display: none;
+      }
+      .nav_390 {
+        display:block;
+      }
+
+      .headertext {
+        font-size: 20px;
+
+      }
+
+      .restaurant-categories {
+        gap: 20px;
+      }
+
+      .category-name {
+        font-size: 16px;
+      }
+
+      .sidebar {
+        display: none;
+      }
+
       .main {
         padding: 24px 20px 24px 20px;
       }
 
-      .footer {
-        padding: 0px 20px 80px;
+      .selection {
+        width: 350px;
+      }
+
+
+
+      .footer_1440 {
+        display: none;
       }
     }
   </style>
 
-  <!-- <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/album/">
-  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-  <link rel="stylesheet" href="../_css/bootstrap.css">
-  <script src="../_js/bootstrap.bundle.js"></script>
+  <link rel="stylesheet" href="./_css/bootstrap.css">
+  <script src="./_js/bootstrap.bundle.js"></script>
 
 </head>
 
 <body>
 
-  <nav>
-    <svg xmlns="http://www.w3.org/2000/svg" style="width: auto;" height="20" viewBox="0 0 20 20" fill="none">
+  <nav class="nav_1440">
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="width: auto;flex-shrink: 0;" height="20" viewBox="0 0 20 20"
+      fill="none">
       <path fill-rule="evenodd" clip-rule="evenodd"
         d="M19.1667 3.33325H0.833344V5.83325H19.1667V3.33325ZM19.1667 9.16658H0.833344V11.6666H19.1667V9.16658ZM0.833344 14.9999H19.1667V17.4999H0.833344V14.9999Z"
         fill="#8D2727" />
     </svg>
-    <svg xmlns="http://www.w3.org/2000/svg" style="width: auto;" height="36" viewBox="0 0 153 36" fill="none">
+    <svg xmlns="http://www.w3.org/2000/svg" style="width: auto;flex-shrink: 0;" height="36" viewBox="0 0 153 36"
+      fill="none">
       <g clip-path="url(#clip0_4268_2886)">
         <path
           d="M19.3933 1.27686C17.1971 1.27686 15.0225 1.70941 12.9935 2.54984C10.9646 3.39026 9.12103 4.62208 7.56814 6.17498C6.01524 7.72788 4.78341 9.57144 3.94299 11.6004C3.10256 13.6294 2.67001 15.804 2.67001 18.0001C2.67001 20.1962 3.10256 22.3709 3.94299 24.3998C4.78341 26.4288 6.01524 28.2723 7.56814 29.8252C9.12103 31.3781 10.9646 32.6099 12.9935 33.4504C15.0225 34.2908 17.1971 34.7234 19.3933 34.7234C21.5894 34.7234 23.764 34.2908 25.793 33.4504C27.8219 32.6099 29.6655 31.3781 31.2184 29.8252C32.7713 28.2723 34.0031 26.4288 34.8435 24.3998C35.6839 22.3709 36.1165 20.1962 36.1165 18.0001C36.1165 15.804 35.6839 13.6294 34.8435 11.6004C34.0031 9.57144 32.7713 7.72788 31.2184 6.17498C29.6655 4.62208 27.8219 3.39026 25.793 2.54984C23.764 1.70941 21.5894 1.27686 19.3933 1.27686Z"
@@ -226,8 +258,8 @@
         </clipPath>
       </defs>
     </svg>
-    <div class="row" style="width:auto;display:flex;align-items: center; gap: 8px;padding:0px 24px;">
-      <svg xmlns="http://www.w3.org/2000/svg" style="width: auto;" height="16" viewBox="0 0 16 16" fill="none">
+    <div class="row" style="width:auto;display:flex; white-space:nowrap; align-items: center; gap:8px; padding:0 24px;">
+      <svg xmlns="http://www.w3.org/2000/svg" style="width:auto;" height="16" viewBox="0 0 16 16" fill="none">
         <path fill-rule="evenodd" clip-rule="evenodd"
           d="M8.00002 0.666748C9.60002 0.666748 11.2667 1.26675 12.4667 2.53341C14.9334 5.00008 14.9334 9.06675 12.4667 11.4667L8.00002 16.0001L3.53335 11.5334C1.06668 9.06675 1.06668 5.00008 3.53335 2.53341C4.73335 1.26675 6.40002 0.666748 8.00002 0.666748ZM8.00002 13.2001L11.0667 10.1334C12.7333 8.40008 12.7333 5.66675 11.0667 3.93341C10.2667 3.13341 9.13335 2.66675 8.00002 2.66675C6.86668 2.66675 5.73335 3.13341 4.93335 3.93341C3.26668 5.66675 3.26668 8.40008 4.93335 10.1334L8.00002 13.2001ZM9.33335 7.00008C9.33335 7.3537 9.19287 7.69284 8.94282 7.94289C8.69278 8.19294 8.35364 8.33342 8.00002 8.33342C7.64639 8.33342 7.30726 8.19294 7.05721 7.94289C6.80716 7.69284 6.66668 7.3537 6.66668 7.00008C6.66668 6.64646 6.80716 6.30732 7.05721 6.05727C7.30726 5.80722 7.64639 5.66675 8.00002 5.66675C8.35364 5.66675 8.69278 5.80722 8.94282 6.05727C9.19287 6.30732 9.33335 6.64646 9.33335 7.00008Z"
           fill="black" />
@@ -245,9 +277,11 @@
       </svg>
       <span style="width: auto;color: #4B4B4B;font-family: Inter;font-size: 13.672px;font-style: normal;font-weight: 500;
       line-height: normal;">搜尋</span>
-
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" style="width: auto;" height="20" viewBox="0 0 20 20" fill="none">
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="width: auto;flex-shrink: 0;" height="20" viewBox="0 0 20 20"
+      fill="none">
       <path fill-rule="evenodd" clip-rule="evenodd"
         d="M4.58333 14.9999H17.5L19.1667 4.58325H5.41667L5 2.08325H0.75V4.58325H2.83333L4.58333 14.9999ZM16.25 7.08325L15.4167 12.4999H6.66667L5.83333 7.08325H16.25ZM6.25 19.1666C6.69203 19.1666 7.11595 18.991 7.42851 18.6784C7.74107 18.3659 7.91667 17.9419 7.91667 17.4999C7.91667 17.0579 7.74107 16.634 7.42851 16.3214C7.11595 16.0088 6.69203 15.8333 6.25 15.8333C5.80797 15.8333 5.38405 16.0088 5.07149 16.3214C4.75893 16.634 4.58333 17.0579 4.58333 17.4999C4.58333 17.9419 4.75893 18.3659 5.07149 18.6784C5.38405 18.991 5.80797 19.1666 6.25 19.1666ZM17.9167 17.4999C17.9167 17.9419 17.7411 18.3659 17.4285 18.6784C17.1159 18.991 16.692 19.1666 16.25 19.1666C15.808 19.1666 15.384 18.991 15.0715 18.6784C14.7589 18.3659 14.5833 17.9419 14.5833 17.4999C14.5833 17.0579 14.7589 16.634 15.0715 16.3214C15.384 16.0088 15.808 15.8333 16.25 15.8333C16.692 15.8333 17.1159 16.0088 17.4285 16.3214C17.7411 16.634 17.9167 17.0579 17.9167 17.4999Z"
         fill="black" />
@@ -255,7 +289,323 @@
     <img class="navbaravatar">
 
 
+
   </nav>
+  <nav class="nav_390">
+    <style>
+      /* .nav_390 {
+        display: none;
+      } */
+
+      .mobile-header {
+        background-color: rgba(255, 255, 255, 1);
+        z-index: 0;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 8px 20px 12px;
+      }
+
+      .nav-container {
+        display: flex;
+        width: auto;
+        align-items: center;
+        justify-content: space-between;
+        white-space: nowrap;
+        flex-wrap: nowrap ;
+      }
+
+      .brand-wrapper {
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .menu-icon {
+        aspect-ratio: 1.29;
+        object-fit: contain;
+        width: 18px;
+        fill: var(--Primary-Varients-800, #8d2727);
+        align-self: stretch;
+      }
+
+      .brand-logo {
+        aspect-ratio: 4.5;
+        object-fit: contain;
+        width: 153px;
+        align-self: stretch;
+      }
+
+      .nav-action {
+        aspect-ratio: 2.25;
+        object-fit: contain;
+        width: 108px;
+        align-self: stretch;
+      }
+
+      .location-wrapper {
+        display: flex;
+        margin-top: 8px;
+        min-height: 36px;
+        width: 100%;
+      }
+
+      .location-content {
+        border-radius: 500px;
+        display: flex;
+        min-width: 240px;
+        min-height: 36px;
+        width: 100%;
+        align-items: center;
+        gap: 40px 100px;
+        justify-content: space-between;
+        flex: 1;
+        padding: 10px 0;
+      }
+
+      .address-wrapper {
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+      }
+
+      .location-icon-wrapper {
+        align-self: stretch;
+        display: flex;
+        min-height: 16px;
+        padding-right: 4px;
+        flex-direction: column;
+        width: 20px;
+      }
+
+      .location-icon-container {
+        display: flex;
+        min-height: 16px;
+        width: 16px;
+        flex-direction: column;
+        overflow: hidden;
+        justify-content: center;
+      }
+
+      .location-icon {
+        aspect-ratio: 1;
+        object-fit: contain;
+        width: 100%;
+        flex: 1;
+      }
+
+      .address-text {
+        align-self: stretch;
+        overflow: hidden;
+        color: var(--www-ubereats-com-black, #000);
+        white-space: nowrap;
+        width: 156px;
+        font: 500 14px/1 Inter, sans-serif;
+      }
+
+      .time-selector {
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+      }
+
+      .time-text {
+        align-self: stretch;
+        overflow: hidden;
+        color: var(--www-ubereats-com-black, #000);
+        white-space: nowrap;
+        font: 500 14px/1 Inter, sans-serif;
+      }
+
+      .dropdown-icon-wrapper {
+        align-self: stretch;
+        display: flex;
+        min-height: 16px;
+        padding-left: 4px;
+        flex-direction: column;
+        width: 20px;
+      }
+
+      .dropdown-icon {
+        aspect-ratio: 1;
+        object-fit: contain;
+        width: 100%;
+        flex: 1;
+      }
+
+      .search-section {
+        display: flex;
+        margin-top: 8px;
+        width: 100%;
+        align-items: start;
+        gap: 4px;
+        justify-content: center;
+      }
+
+      .search-container {
+        border-radius: 16px;
+        background: var(--Netual-Varients-50, #f5f6f6);
+        position: relative;
+        display: flex;
+        min-width: 240px;
+        flex-direction: column;
+        flex: 1;
+        padding: 0 12px;
+      }
+
+      .search-input-wrapper {
+        align-items: center;
+        border-radius: 500px;
+        background: var(--Netual-Varients-50, #f5f6f6);
+        z-index: 0;
+        display: flex;
+        width: 100%;
+        padding: 8px 0;
+      }
+
+      .search-icon-wrapper {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        width: 44px;
+        padding: 0 12px 0 16px;
+      }
+
+      .search-icon {
+        aspect-ratio: 1;
+        object-fit: contain;
+        width: 16px;
+      }
+
+      .search-input {
+        align-self: stretch;
+        display: flex;
+        min-width: 240px;
+        padding-top: 2px;
+        flex-direction: column;
+        overflow: hidden;
+        color: var(--www-ubereats-com-tundora, #4b4b4b);
+        white-space: nowrap;
+        width: 576px;
+        font: 500 14px Inter, sans-serif;
+      }
+
+      .search-placeholder {
+        width: 100%;
+        padding-bottom: 2px;
+        overflow: hidden;
+      }
+
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+      }
+
+      .filter-wrapper {
+        display: flex;
+        min-height: 40px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        padding: 2px 5px 8px 8px;
+      }
+
+      .filter-icon {
+        display: flex;
+        max-width: 18px;
+        flex-direction: column;
+      }
+
+      .filter-color {
+        background-color: rgba(16, 24, 40, 1);
+        display: flex;
+        min-height: 18px;
+        width: 100%;
+        height: 18px;
+        fill: var(--grey-900, #101828);
+      }
+
+      .filter-secondary {
+        display: flex;
+        min-height: 30px;
+        width: 24px;
+      }
+
+      @media (max-width: 640px) {
+        .filter-secondary {
+          display: none;
+        }
+      }
+    </style>
+
+    <div class="mobile-header">
+      <nav class="nav-container">
+        <div class="brand-wrapper">
+          <img loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/9267af16d3f3c3e7ba39fac84290e50f678073b1569b5cd785faf5829d068e71?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+            class="menu-icon" alt="Menu" />
+          <img loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/a605f12fa0f5f54bf08d26e932380f95b779b785a6f009060b9c7a3460dd0ea2?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+            class="brand-logo" alt="Brand Logo" />
+        </div>
+        <img loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/a7c150a87c0d53688279ad31bee3dec63949c1a9fd7a09b068f928905af8267d?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+          class="nav-action" alt="Navigation Actions" />
+      </nav>
+      <div class="location-wrapper">
+        <div class="location-content">
+          <div class="address-wrapper">
+            <div class="location-icon-wrapper">
+              <div class="location-icon-container">
+                <img loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/9af0780c5cfb06ea9a8fb00630f15825b1cab85b891a5b90b95d65d26193534b?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                  class="location-icon" alt="Location Pin" />
+              </div>
+            </div>
+            <div class="address-text">大安森林公園東三門出口</div>
+          </div>
+          <div class="time-selector" role="button" tabindex="0">
+            <div class="time-text">現在</div>
+            <div class="dropdown-icon-wrapper">
+              <div class="location-icon-container">
+                <img loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/0ea7a066290438a4649de8eeed5bdce4d3a68f695a17567a32e27969bbb8e40a?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                  class="dropdown-icon" alt="Dropdown Arrow" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="search-section">
+        <form class="search-container" role="search">
+          <div class="search-input-wrapper">
+            <div class="search-icon-wrapper">
+              <img loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/9e369cb2feeda136d78e9362425d267c41eddee42bf35250cd1308913b2ed204?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                class="search-icon" alt="Search Icon" />
+            </div>
+            <label for="searchInput" class="visually-hidden">搜尋</label>
+            <input type="search" id="searchInput" class="search-input" placeholder="搜尋" aria-label="搜尋" />
+          </div>
+        </form>
+        <div class="filter-wrapper" role="button" tabindex="0" aria-label="Filter Options">
+          <div class="filter-icon">
+            <div class="filter-color"></div>
+          </div>
+          <div class="filter-secondary"></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
   <header class="headertext">在城市中探索美食，找尋你的美好食光</header>
   <section class="main">
     <aside class="sidebar">
@@ -310,7 +660,7 @@
         </div>
       </div>
       <hr style="opacity: 0.2;">
-      <div class="arrangement" >
+      <div class="arrangement">
         <h3 class="mb-3 fw-bold ">排序方式</h3>
         <div style="display: flex; align-items: center">
           <input style="width: auto;" name="sidebar_radio" type="radio" id="sidebar_arrangement_relevent">
@@ -361,18 +711,18 @@
               <path
                 d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
             </svg><svg xmlns="http://www.w3.org/2000/svg" style="width:42px;fill:#FACA16;display:stretch;" height="24"
-            class="bi bi-star-fill" viewBox="-4 -4 24 24">
-            <path
-              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-          </svg><svg xmlns="http://www.w3.org/2000/svg" style="width:42px;fill:#FACA16;display:stretch;" height="24"
-          class="bi bi-star-fill" viewBox="-4 -4 24 24">
-          <path
-            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-        </svg><svg xmlns="http://www.w3.org/2000/svg" style="width:42px;fill:#FACA16;display:stretch;" height="24"
-        class="bi bi-star-fill" viewBox="-4 -4 24 24">
-        <path
-          d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-      </svg>
+              class="bi bi-star-fill" viewBox="-4 -4 24 24">
+              <path
+                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+            </svg><svg xmlns="http://www.w3.org/2000/svg" style="width:42px;fill:#FACA16;display:stretch;" height="24"
+              class="bi bi-star-fill" viewBox="-4 -4 24 24">
+              <path
+                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+            </svg><svg xmlns="http://www.w3.org/2000/svg" style="width:42px;fill:#FACA16;display:stretch;" height="24"
+              class="bi bi-star-fill" viewBox="-4 -4 24 24">
+              <path
+                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+            </svg>
             <span style="color:#4B4B4B;">(329)</span>
           </label>
         </div>
@@ -391,18 +741,18 @@
               <path
                 d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
             </svg><svg xmlns="http://www.w3.org/2000/svg" style="width:42px;fill:#FACA16;display:stretch;" height="24"
-            class="bi bi-star-fill" viewBox="-4 -4 24 24">
-            <path
-              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-          </svg><svg xmlns="http://www.w3.org/2000/svg" style="width:42px;fill:#FACA16;display:stretch;" height="24"
-          class="bi bi-star-fill" viewBox="-4 -4 24 24">
-          <path
-            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-        </svg><svg xmlns="http://www.w3.org/2000/svg" style="width:42px;fill:#D1D5DB;display:stretch;" height="24"
-        class="bi bi-star-fill" viewBox="-4 -4 24 24">
-        <path
-          d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-      </svg>
+              class="bi bi-star-fill" viewBox="-4 -4 24 24">
+              <path
+                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+            </svg><svg xmlns="http://www.w3.org/2000/svg" style="width:42px;fill:#FACA16;display:stretch;" height="24"
+              class="bi bi-star-fill" viewBox="-4 -4 24 24">
+              <path
+                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+            </svg><svg xmlns="http://www.w3.org/2000/svg" style="width:42px;fill:#D1D5DB;display:stretch;" height="24"
+              class="bi bi-star-fill" viewBox="-4 -4 24 24">
+              <path
+                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+            </svg>
             <span style="color:#4B4B4B;">(288)</span>
           </label>
         </div>
@@ -421,18 +771,18 @@
               <path
                 d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
             </svg><svg xmlns="http://www.w3.org/2000/svg" style="width:42px;fill:#FACA16;display:stretch;" height="24"
-            class="bi bi-star-fill" viewBox="-4 -4 24 24">
-            <path
-              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-          </svg><svg xmlns="http://www.w3.org/2000/svg" style="width:42px;fill:#D1D5DB;display:stretch;" height="24"
-          class="bi bi-star-fill" viewBox="-4 -4 24 24">
-          <path
-            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-        </svg><svg xmlns="http://www.w3.org/2000/svg" style="width:42px;fill:#D1D5DB;display:stretch;" height="24"
-        class="bi bi-star-fill" viewBox="-4 -4 24 24">
-        <path
-          d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-      </svg>
+              class="bi bi-star-fill" viewBox="-4 -4 24 24">
+              <path
+                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+            </svg><svg xmlns="http://www.w3.org/2000/svg" style="width:42px;fill:#D1D5DB;display:stretch;" height="24"
+              class="bi bi-star-fill" viewBox="-4 -4 24 24">
+              <path
+                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+            </svg><svg xmlns="http://www.w3.org/2000/svg" style="width:42px;fill:#D1D5DB;display:stretch;" height="24"
+              class="bi bi-star-fill" viewBox="-4 -4 24 24">
+              <path
+                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+            </svg>
             <span style="color:#4B4B4B;">(75)</span>
           </label>
         </div>
@@ -451,18 +801,18 @@
               <path
                 d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
             </svg><svg xmlns="http://www.w3.org/2000/svg" style="width:42px;fill:#D1D5DB;display:stretch;" height="24"
-            class="bi bi-star-fill" viewBox="-4 -4 24 24">
-            <path
-              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-          </svg><svg xmlns="http://www.w3.org/2000/svg" style="width:42px;fill:#D1D5DB;display:stretch;" height="24"
-          class="bi bi-star-fill" viewBox="-4 -4 24 24">
-          <path
-            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-        </svg><svg xmlns="http://www.w3.org/2000/svg" style="width:42px;fill:#D1D5DB;display:stretch;" height="24"
-        class="bi bi-star-fill" viewBox="-4 -4 24 24">
-        <path
-          d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-      </svg>
+              class="bi bi-star-fill" viewBox="-4 -4 24 24">
+              <path
+                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+            </svg><svg xmlns="http://www.w3.org/2000/svg" style="width:42px;fill:#D1D5DB;display:stretch;" height="24"
+              class="bi bi-star-fill" viewBox="-4 -4 24 24">
+              <path
+                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+            </svg><svg xmlns="http://www.w3.org/2000/svg" style="width:42px;fill:#D1D5DB;display:stretch;" height="24"
+              class="bi bi-star-fill" viewBox="-4 -4 24 24">
+              <path
+                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+            </svg>
             <span style="color:#4B4B4B;">(33)</span>
           </label>
         </div>
@@ -481,18 +831,18 @@
               <path
                 d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
             </svg><svg xmlns="http://www.w3.org/2000/svg" style="width:42px;fill:#D1D5DB;display:stretch;" height="24"
-            class="bi bi-star-fill" viewBox="-4 -4 24 24">
-            <path
-              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-          </svg><svg xmlns="http://www.w3.org/2000/svg" style="width:42px;fill:#D1D5DB;display:stretch;" height="24"
-          class="bi bi-star-fill" viewBox="-4 -4 24 24">
-          <path
-            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-        </svg><svg xmlns="http://www.w3.org/2000/svg" style="width:42px;fill:#D1D5DB;display:stretch;" height="24"
-        class="bi bi-star-fill" viewBox="-4 -4 24 24">
-        <path
-          d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-      </svg>
+              class="bi bi-star-fill" viewBox="-4 -4 24 24">
+              <path
+                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+            </svg><svg xmlns="http://www.w3.org/2000/svg" style="width:42px;fill:#D1D5DB;display:stretch;" height="24"
+              class="bi bi-star-fill" viewBox="-4 -4 24 24">
+              <path
+                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+            </svg><svg xmlns="http://www.w3.org/2000/svg" style="width:42px;fill:#D1D5DB;display:stretch;" height="24"
+              class="bi bi-star-fill" viewBox="-4 -4 24 24">
+              <path
+                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+            </svg>
             <span style="color:#4B4B4B;">(6)</span>
           </label>
         </div>
@@ -537,7 +887,123 @@
       </div>
     </aside>
     <section class="selection">
-      <style>
+
+      <section class="coupon" style="display: flex; flex-wrap: nowrap;justify-content: flex-start;">
+        <img class="coupon_img img-fluid" src="./resource/landing_page/selection/coupon/banner.png" style="width: 440px;
+height: 186px; margin-right:24px  ;">
+        <img class="coupon_img img-fluid" src="./resource/landing_page/selection/coupon/banner-1.png" style="width: 440px;
+height: 186px; margin-right:24px ;">
+        <img class="coupon_img img-fluid" src="./resource/landing_page/selection/coupon/banner-2.png" style="width: 440px;
+height: 186px; margin-right:24px ;">
+      </section>
+      <section class="categoryrecommend" style="display: flex; flex-wrap: nowrap;height: fit-content;">
+        <style class="categoryrecommend">
+          .restaurant-categories {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            font-size: 14px;
+            color: #101828;
+            text-align: center;
+            line-height: 1.6;
+          }
+
+          .category-item {
+            display: flex;
+            flex-direction: column;
+            width: 80px;
+            margin: auto 0;
+          }
+
+          .category-icon {
+            aspect-ratio: 1;
+            object-fit: contain;
+            width: 80px;
+            align-self: center;
+          }
+
+          .category-name {
+            margin: 8px 0 0;
+            font-size: 16px;
+          }
+
+          .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+          }
+        </style>
+        <nav class="restaurant-categories" aria-label="Restaurant Categories" style="height: fit-content;">
+          <article class="category-item">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/31a20904f7c881435f864b1e8e7ac1e3c3500357711e802d42955ef29d881a56?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+              alt="All Restaurants Icon" class="category-icon" />
+            <h2 class="category-name">所有餐廳</h2>
+          </article>
+
+          <article class="category-item">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/0d86e5aa3dedc8155541201fbd5d2f1c26298135f8f8dd7d78a987004c51f3d1?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+              alt="Cafe & Light Meals Icon" class="category-icon" />
+            <h2 class="category-name">咖啡簡餐</h2>
+          </article>
+
+          <article class="category-item">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/58282edb8736930f527cc20187a9b79e6e751e8c1be0a846adde2b062fd674b0?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+              alt="Japanese Cuisine Icon" class="category-icon" />
+            <h2 class="category-name">日式料理</h2>
+          </article>
+
+          <article class="category-item">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/e1dadedeb36b3ced4eb20c38e1db4e557508bc1be841de2bc67bb51108c6ce49?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+              alt="Italian Restaurant Icon" class="category-icon" />
+            <h2 class="category-name">義式餐廳</h2>
+          </article>
+
+          <article class="category-item">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/1d45d9f82ca6529a33c43e138daacf157110aa05282cd541dbe4779a91909f19?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+              alt="American Restaurant Icon" class="category-icon" />
+            <h2 class="category-name">美式餐廳</h2>
+          </article>
+
+          <article class="category-item">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/c851bbc515a2b02171002b2e8e0702e9037fd837e1509bb329c43a700b132fc7?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+              alt="Korean Cuisine Icon" class="category-icon" />
+            <h2 class="category-name">韓式料理</h2>
+          </article>
+
+          <article class="category-item">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/9f95fe3ac319188977a4ab90b8f4c470c59ac0e1ce5d33b5da1a016805fc3586?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+              alt="Chinese Restaurant Icon" class="category-icon" />
+            <h2 class="category-name">中式餐廳</h2>
+          </article>
+
+          <article class="category-item">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/aae5b1e398016ca1623374176817a2bab14b37d4970f7861377694e39ffb4ddd?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+              alt="Mexican Cuisine Icon" class="category-icon" />
+            <h2 class="category-name">南美風味</h2>
+          </article>
+
+          <article class="category-item">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/56f3faeea108cadb50ecc61f06fd09fa66112106cd940643447689364d16f6b2?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+              alt="Teppanyaki Icon" class="category-icon" />
+            <h2 class="category-name">鐵板料理</h2>
+          </article>
+        </nav>
+      </section>
+      <style class="restaurant">
         .price-text {
           color: var(--Primary-Varients-500, #de5555);
           font: 600 12px/18px Open Sans, sans-serif;
@@ -558,15 +1024,12 @@
 
         .header-bar {
           display: flex;
-          min-width: 240px;
           width: 100%;
           align-items: center;
-          gap: 40px 100px;
           font-family: Noto Sans TC, sans-serif;
           font-weight: 700;
           white-space: nowrap;
           justify-content: space-between;
-          flex-wrap: wrap;
           flex: 1;
           flex-basis: 0%;
           height: 48px;
@@ -607,7 +1070,7 @@
 
         .restaurant-row {
           display: flex;
-          min-width: 240px;
+          width: 948px;
           align-items: center;
           gap: 24px;
           justify-content: start;
@@ -815,149 +1278,7 @@
           transform: translate(-50%, 0%);
           height: 40px;
         }
-
-        @media (max-width: 991px) {
-
-          .quick-delivery-section,
-          .restaurant-grid,
-          .restaurant-row {
-            max-width: 100%;
-          }
-
-          .header-bar,
-          .view-more-wrapper,
-          .rating-wrapper,
-          .separator,
-          .tag-container,
-          .feature-tag {
-            white-space: initial;
-          }
-        }
       </style>
-      <section class="coupon" style="display: flex; flex-wrap: nowrap;">
-        <img src="./resource/landing_page/selection/coupon/banner.png" style="width: 440px;
-height: 186px; margin-right:24px ;">
-        <img src="./resource/landing_page/selection/coupon/banner-1.png" style="width: 440px;
-height: 186px; margin-right:24px ;">
-        <img src="./resource/landing_page/selection/coupon/banner-2.png" style="width: 440px;
-height: 186px; margin-right:24px ;">
-      </section>
-      <section class="categoryrecommend" style="display: flex; flex-wrap: nowrap;height: fit-content;">
-        <style>
-          .restaurant-categories {
-            display: flex;
-            margin: 20px 0 0;
-            align-items: center;
-            gap: 40px;
-            font-size: 14px;
-            color: #101828;
-            text-align: center;
-            line-height: 1.6;
-          }
-
-          .category-item {
-            display: flex;
-            flex-direction: column;
-            width: 80px;
-            margin: auto 0;
-          }
-
-          .category-icon {
-            aspect-ratio: 1;
-            object-fit: contain;
-            width: 80px;
-            align-self: center;
-          }
-
-          .category-name {
-            margin: 8px 0 0;
-          }
-
-          .visually-hidden {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            border: 0;
-          }
-
-          @media (max-width: 991px) {
-
-            .restaurant-categories,
-            .category-item {
-              max-width: 100%;
-              white-space: initial;
-            }
-          }
-        </style>
-        <nav class="restaurant-categories" aria-label="Restaurant Categories" style="height: fit-content;">
-          <article class="category-item">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/31a20904f7c881435f864b1e8e7ac1e3c3500357711e802d42955ef29d881a56?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
-              alt="All Restaurants Icon" class="category-icon" />
-            <h2 class="category-name">所有餐廳</h2>
-          </article>
-
-          <article class="category-item">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/0d86e5aa3dedc8155541201fbd5d2f1c26298135f8f8dd7d78a987004c51f3d1?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
-              alt="Cafe & Light Meals Icon" class="category-icon" />
-            <h2 class="category-name">咖啡簡餐</h2>
-          </article>
-
-          <article class="category-item">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/58282edb8736930f527cc20187a9b79e6e751e8c1be0a846adde2b062fd674b0?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
-              alt="Japanese Cuisine Icon" class="category-icon" />
-            <h2 class="category-name">日式料理</h2>
-          </article>
-
-          <article class="category-item">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/e1dadedeb36b3ced4eb20c38e1db4e557508bc1be841de2bc67bb51108c6ce49?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
-              alt="Italian Restaurant Icon" class="category-icon" />
-            <h2 class="category-name">義式餐廳</h2>
-          </article>
-
-          <article class="category-item">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/1d45d9f82ca6529a33c43e138daacf157110aa05282cd541dbe4779a91909f19?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
-              alt="American Restaurant Icon" class="category-icon" />
-            <h2 class="category-name">美式餐廳</h2>
-          </article>
-
-          <article class="category-item">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/c851bbc515a2b02171002b2e8e0702e9037fd837e1509bb329c43a700b132fc7?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
-              alt="Korean Cuisine Icon" class="category-icon" />
-            <h2 class="category-name">韓式料理</h2>
-          </article>
-
-          <article class="category-item">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/9f95fe3ac319188977a4ab90b8f4c470c59ac0e1ce5d33b5da1a016805fc3586?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
-              alt="Chinese Restaurant Icon" class="category-icon" />
-            <h2 class="category-name">中式餐廳</h2>
-          </article>
-
-          <article class="category-item">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/aae5b1e398016ca1623374176817a2bab14b37d4970f7861377694e39ffb4ddd?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
-              alt="Mexican Cuisine Icon" class="category-icon" />
-            <h2 class="category-name">南美風味</h2>
-          </article>
-
-          <article class="category-item">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/56f3faeea108cadb50ecc61f06fd09fa66112106cd940643447689364d16f6b2?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
-              alt="Teppanyaki Icon" class="category-icon" />
-            <h2 class="category-name">鐵板料理</h2>
-          </article>
-        </nav>
-      </section>
       <section class="fastDeliver">
 
         <div class="quick-delivery-section">

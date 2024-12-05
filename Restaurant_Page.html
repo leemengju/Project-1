@@ -7,7 +7,7 @@
     <title>Document</title>
     <style>
         * {
-            position: relative;
+            position: relative;     
             /* border: 1px black solid; */
             width: 100%;
             font-family: "Noto Sans TC";
@@ -20,8 +20,6 @@
             border-color: red;
             overflow: scroll;
         }
-
-
 
         nav {
             box-sizing: border-box;
@@ -82,7 +80,7 @@
             position: absolute;
             transform: translateX(-15%);
             top: 80%;
-            
+
         }
 
 
@@ -108,7 +106,6 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: flex-start;
-           
         }
 
         .stepper {
@@ -248,13 +245,7 @@
                 white-space: initial;
             }
 
-            .product-card {
-                display: flex;
-                max-width: 100%;
-                white-space: initial;
-                padding: 12px 20px;
-                height: 100%;
-            }
+
 
             .product-info {
                 white-space: initial;
@@ -271,11 +262,30 @@
 
         }
 
-     
+
 
         @media screen and (max-width:1440px) and (min-width:1280px) {
             .main {
                 padding: 24px 20px 24px 20px;
+            }
+
+            .footer {
+                padding: 0px 20px 80px;
+            }
+        }
+
+        @media screen and (max-width: 578px) and (min-width: 375px) {
+            .main {
+                padding: 16px 32px 16px;
+
+            }
+
+            .product-card {
+                display: flex;
+                max-width: 100%;
+                white-space: initial;
+                padding: 12px 20px;
+                height: 100%;
             }
 
             .footer {
@@ -396,8 +406,6 @@
         <section class="Restaurant_info">
 
             <style>
-
-
                 .tag-list {
                     align-self: start;
                     display: flex;
@@ -571,61 +579,61 @@
                 }
             </style>
 
-                <div class="tag-list">
-                    <div class="tag-highlight">指定餐點 5 折</div>
-                    <div class="tag-default">交通方便</div>
-                    <div class="tag-default">少油少鹽</div>
-                    <div class="tag-default">聚餐首選</div>
-                </div>
+            <div class="tag-list">
+                <div class="tag-highlight">指定餐點 5 折</div>
+                <div class="tag-default">交通方便</div>
+                <div class="tag-default">少油少鹽</div>
+                <div class="tag-default">聚餐首選</div>
+            </div>
 
-                <div class="store-container">
-                    <div class="store-info">
-                        <h1 class="store-name">Flavor Factory 義大利小館</h1>
-                        <div class="info-list">
-                            <div class="info-item">
-                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d74ea16c45ad2f1235c6ef705acd5acc3e81dfec023fddde2da7acfba4100659?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
-                                    alt="Rating icon" class="info-icon" />
-                                <span>4.9</span>
-                            </div>
-                            <div class="info-item">
-                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b6d17be28bb233e0aaa43c4e98bb65426371db14510bb166a1e38292573c6d87?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
-                                    alt="Reviews icon" class="info-icon" />
-                                <span>2,863 個評論</span>
-                            </div>
-                            <div class="info-item">
-                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4af0eec3ea8bc2418fbabeaf4c47b92f0fe4df35b491105519d433ecc7c6e9b4?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
-                                    alt="Price range icon" class="info-icon" />
-                                <span>400-800</span>
-                            </div>
-                            <div class="info-item">
-                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/959d9de587296ab5c8c29d5dd47d491b2302da4ac75085e301e6ebc4f0763d3d?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
-                                    alt="Opening hours icon" class="info-icon" />
-                                <span><span class="status-text">營業中</span> 11:00-20:00</span>
-                            </div>
-                            <div class="info-item">
-                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ffdbc677d08eb9bcf97ab44f3d8e9f62507190d3944133999162a35237e15d4d?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
-                                    alt="Restaurant type icon" class="info-icon" />
-                                <span>義大利麵店</span>
-                            </div>
-                            <button class="more-info" tabindex="0">更多資訊</button>
+            <div class="store-container">
+                <div class="store-info">
+                    <h1 class="store-name">Flavor Factory 義大利小館</h1>
+                    <div class="info-list">
+                        <div class="info-item">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d74ea16c45ad2f1235c6ef705acd5acc3e81dfec023fddde2da7acfba4100659?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                                alt="Rating icon" class="info-icon" />
+                            <span>4.9</span>
                         </div>
-                    </div>
-
-                    <div class="delivery-toggle" role="tablist">
-                        <button class="toggle-active" role="tab" aria-selected="true" tabindex="0">外送</button>
-                        <button class="toggle-inactive" role="tab" aria-selected="false" tabindex="0">外帶</button>
+                        <div class="info-item">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b6d17be28bb233e0aaa43c4e98bb65426371db14510bb166a1e38292573c6d87?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                                alt="Reviews icon" class="info-icon" />
+                            <span>2,863 個評論</span>
+                        </div>
+                        <div class="info-item">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4af0eec3ea8bc2418fbabeaf4c47b92f0fe4df35b491105519d433ecc7c6e9b4?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                                alt="Price range icon" class="info-icon" />
+                            <span>400-800</span>
+                        </div>
+                        <div class="info-item">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/959d9de587296ab5c8c29d5dd47d491b2302da4ac75085e301e6ebc4f0763d3d?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                                alt="Opening hours icon" class="info-icon" />
+                            <span><span class="status-text">營業中</span> 11:00-20:00</span>
+                        </div>
+                        <div class="info-item">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ffdbc677d08eb9bcf97ab44f3d8e9f62507190d3944133999162a35237e15d4d?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                                alt="Restaurant type icon" class="info-icon" />
+                            <span>義大利麵店</span>
+                        </div>
+                        <button class="more-info" tabindex="0">更多資訊</button>
                     </div>
                 </div>
 
-                <div class="delivery-info">
-                    <div class="info-item">
-                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/280050cd8b8c8447a434959d19e71de37ffc54c999b68ebc43bc3b277754f121?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
-                            alt="Delivery time icon" class="info-icon" />
-                        <span>20-30分鐘</span>
-                    </div>
-                    <span style="width: auto;">外送費 $45</span>
+                <div class="delivery-toggle" role="tablist">
+                    <button class="toggle-active" role="tab" aria-selected="true" tabindex="0">外送</button>
+                    <button class="toggle-inactive" role="tab" aria-selected="false" tabindex="0">外帶</button>
                 </div>
-           
+            </div>
+
+            <div class="delivery-info">
+                <div class="info-item">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/280050cd8b8c8447a434959d19e71de37ffc54c999b68ebc43bc3b277754f121?placeholderIfAbsent=true&apiKey=29bdb496da09449eb579968368248119"
+                        alt="Delivery time icon" class="info-icon" />
+                    <span>20-30分鐘</span>
+                </div>
+                <span style="width: auto;">外送費 $45</span>
+            </div>
+
         </section>
         <section class="stepper">
             <div class="stepper-dividor"
@@ -672,7 +680,7 @@
                             <div class="product-price">$450</div>
                             <div class="product-description">
                                 以新鮮海鮮和香濃的白酒醬汁為特色，帶來豐富的口感和誘人的香氣，海鮮愛好者不可錯過。
-                                
+
                             </div>
                         </div>
                         <img loading="lazy"
@@ -685,7 +693,7 @@
                             <div class="product-price">$180</div>
                             <div class="product-description">
                                 融合了新鮮蝦仁和蛋液的美味料理，口感豐富、營養均衡，散發著濃厚的海鮮和蛋香。
-                                
+
                             </div>
                         </div>
                         <img loading="lazy"
@@ -700,7 +708,7 @@
                             <div class="product-price">$450</div>
                             <div class="product-description">
                                 融合了清新的青醬和濃郁的奶油，味道豐富且令人回 味無窮，是一道獨特而美味的餐點。
-                              
+
                             </div>
                         </div>
                         <img loading="lazy"
@@ -713,7 +721,7 @@
                             <div class="product-price">$200</div>
                             <div class="product-description">
                                 結合了甜美的無花果、濃郁的起司和清新的生菜是夏日中輕盈健康的完美選擇。
-                               
+
                             </div>
                         </div>
                         <img loading="lazy"
@@ -733,8 +741,8 @@
                     </div>
                     <div class="subtitle">
                         肉品原產地：台灣豬肉、牛肉、優質雞腿。我們堅持嚴格細選食材，只為帶給大家美味高品質的美食。
-        
-                        
+
+
                     </div>
                 </div>
                 <div class="products-grid">
@@ -745,7 +753,7 @@
                             <div class="product-description">
                                 這道經典的義大利麵以豐富的肉醬為特色，紅酒和香料的加入提升了整道菜的層次和深度。
 
-                                
+
                             </div>
                         </div>
                         <img loading="lazy"
@@ -758,8 +766,8 @@
                             <div class="product-price">$340</div>
                             <div class="product-description">
                                 清新的朝鮮薊和鹹香的黑橄欖，搭配檸檬汁的酸爽，橄欖油和蒜泥的加入提升了整道菜的香氣。
-                              
-                                
+
+
                             </div>
                         </div>
                         <img loading="lazy"
@@ -788,7 +796,7 @@
                             <div class="product-name">大牌檔肉麵套餐</div>
                             <div class="product-price">$280</div>
                             <div class="product-description">
-                                中式大排檔風味，豐富的肉醬搭配Q彈的義大利麵，  讓每一口都充滿濃郁的美味和層次感。
+                                中式大排檔風味，豐富的肉醬搭配Q彈的義大利麵， 讓每一口都充滿濃郁的美味和層次感。
                             </div>
                         </div>
                         <img loading="lazy"
@@ -806,7 +814,7 @@
                 </div>
                 <div class="subtitle">
                     每道菜都可以根據個人口味適當調整調料與內容物的比例，這樣可以做出更符合自己口味的燉飯。
-                       
+
                 </div>
             </div>
             <div class="products-grid">
@@ -816,8 +824,8 @@
                         <div class="product-price">$290</div>
                         <div class="product-description">
                             嫩滑的菠菜搭配奶酪，帶來一口滿滿的綠色健康和濃郁的風味。
-                         
-                           
+
+
                         </div>
                     </div>
                     <img loading="lazy"
@@ -842,7 +850,7 @@
                     <div class="product-info">
                         <div class="product-name">豌豆與火腿燉飯</div>
                         <div class="product-price">$180</div>
-                        <div class="product-description" >
+                        <div class="product-description">
 
                             當豌豆的清甜與火腿的鹹香交織在一起時，每一口都帶來不同的味覺驚喜。這道燉飯不僅色彩鮮豔，還充滿了多層次的風味，讓人回味無窮。
                         </div>
@@ -879,8 +887,8 @@
                     </div>
                     <div class="subtitle" style="white-space: wrap;">
                         由發酵的麵團、番茄醬和各式各樣的配料組成，通常以高溫烘烤至酥脆香脆。 其豐富多變的口味和創意無限的搭配，使得每一塊披薩都能滿足不同人的味蕾。
-                      
-                       
+
+
                     </div>
                 </div>
                 <div class="products-grid">
@@ -888,9 +896,9 @@
                         <div class="product-info">
                             <div class="product-title">瑪格麗塔披薩</div>
                             <div class="product-price">$340</div>
-                            <div class="product-description"style="white-space: wrap;">
+                            <div class="product-description" style="white-space: wrap;">
                                 簡單而經典的瑪格麗塔披薩，完美展現了意大利的純粹風味。新鮮的番茄醬與柔滑的莫札瑞拉起司相得益彰，搭配香氣四溢的羅勒葉，每一口都是對傳統的美好詮釋。
-                              
+
                             </div>
                         </div>
                         <img loading="lazy"
@@ -901,14 +909,14 @@
                         <div class="product-info">
                             <div class="product-title">四季披薩</div>
                             <div class="product-price">$340</div>
-                            <div class="product-description"style="white-space: wrap;">
+                            <div class="product-description" style="white-space: wrap;">
                                 這道披薩巧妙地將四種獨特的配料融入其中。無論是春天的清新蔬菜、夏天的多汁番茄、秋天的香濃蘑菇，還是冬天的濃郁培根，都讓人感受到季節變遷的美妙。
-                                
-                               
-                                
-                                
-                                
-                                
+
+
+
+
+
+
                             </div>
                         </div>
                         <img loading="lazy"
